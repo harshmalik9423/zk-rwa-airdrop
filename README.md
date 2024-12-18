@@ -82,10 +82,8 @@ This architecture ensures:
 
 ![Pyth Price Feed Integration](./images/pythFeed.png)
 
-The system integrates with Pyth Network Oracle to fetch real-time TSLA stock price data:
+The system integrates with Oracle to fetch real-time TSLA stock price data:
 
-1. Smart contracts connect to Pyth's Price Feed contract
-2. Price updates are received through Pyth's off-chain to on-chain bridge
+1. Smart contracts connect to get Custom Price Feed contract
+2. Price updates are received through Oracle
 3. Price feeds are updated regularly to ensure accuracy
-
-Example usage in smart contracts:
