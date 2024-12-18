@@ -9,9 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@prisma/client": "^5.22.0",
+    "@radix-ui/react-navigation-menu": "^1.2.1",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@web3auth/base": "^9.4.0",
+    "@web3auth/default-evm-adapter": "^9.4.0",
+    "@web3auth/ethereum-provider": "^9.4.0",
+    "@web3auth/metamask-adapter": "^8.12.4",
+    "@web3auth/modal": "^9.4.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "dotenv": "^16.4.5",
+    "lucide-react": "^0.460.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.1.1"
+    "next": "15.1.1",
+    "tailwind-merge": "^2.5.4",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "typescript": "^5",
@@ -22,6 +36,8 @@
     "tailwindcss": "^3.4.1",
     "eslint": "^9",
     "eslint-config-next": "15.1.1",
-    "@eslint/eslintrc": "^3"
+    "@eslint/eslintrc": "^3",
+    "pino-pretty": "^13.0.0",
+    "prisma": "^5.22.0"
   }
 }
