@@ -68,7 +68,7 @@ async function main() {
   );
   // Instantiate the smart contract
   const verifierContractInstantiateTx = new ContractCreateFlow()
-    .setBytecode(contractBytecode)
+    .setBytecode(verifierBytecode)
     .setGas(2000000);
   const verifierContractInstantiateSubmit =
     await verifierContractInstantiateTx.execute(client);
