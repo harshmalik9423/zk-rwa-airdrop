@@ -80,8 +80,6 @@ This architecture ensures:
 
 ### Price Feed Integration
 
-![Pyth Price Feed Integration](./images/pythFeed.png)
-
 The system integrates with Oracle to fetch real-time TSLA stock price data:
 
 1. Smart contracts connect to get Custom Price Feed contract
