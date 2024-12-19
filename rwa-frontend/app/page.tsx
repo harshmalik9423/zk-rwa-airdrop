@@ -219,7 +219,7 @@ export default function Home() {
 
     try {
       // Generate ZK Proof
-      const host = process.env.BACKEND_URL;
+      const host = process.env.NEXT_PUBLIC_BACKEND_URL;
       const response = await fetch(
         'http://' + host + '/api/v1/generateZkProof',
         {
@@ -239,7 +239,7 @@ export default function Home() {
 
       if (response.ok) {
         // TODO: Replace with your actual contract address and ABI
-        const contractAddress = process.env.AIRDROP_CONTRACT_ADDRESS ? process.env.AIRDROP_CONTRACT_ADDRESS : '';
+        const contractAddress = process.env.NEXT_PUBLIC_AIRDROP_CONTRACT_ADDRESS ? process.env.NEXT_PUBLIC_AIRDROP_CONTRACT_ADDRESS : '';
         const contractABI = AIRDROP_CONTRACT_ABI;
 
         // Make contract call
