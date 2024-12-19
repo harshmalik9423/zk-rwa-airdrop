@@ -14,7 +14,7 @@ export async function POST(request: Request) {
     });
 
     return NextResponse.json({
-      isActive: userRegistry?.isActive ?? false,
+      isActive: userRegistry?.isactive ?? false,
     });
   } catch (error) {
     console.error('Error checking Robinhood connection:', error);

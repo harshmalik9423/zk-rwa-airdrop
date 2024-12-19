@@ -11,7 +11,7 @@ export async function POST(request: Request) {
     const userRegistry = await prisma.userRegistry.findFirst({
       where: {
         walletaddress: walletAddress,
-        isActive: true,
+        isactive: true,
       },
     });
 
@@ -25,20 +25,20 @@ export async function POST(request: Request) {
     // Then, get all holdings for this userId
     const holdings = await prisma.userHolding.findMany({
       where: {
-        userId: userRegistry.userId,
+        userid: userRegistry.userid,
       },
       select: {
         holding: true,
-        noOfShares: true,
-        lastHoldingTime: true,
+        noofshares: true,
+        lastholdingtime: true,
       },
     });
 
     // Transform the data to match the frontend's expected format
     const formattedHoldings = holdings.map((holding) => ({
       symbol: holding.holding,
-      noOfShares: holding.noOfShares,
-      lastHoldingTime: holding.lastHoldingTime.toISOString(),
+      noOfShares: holding.noofshares,
+      lastHoldingTime: holding.lastholdingtime.toISOString(),
     }));
 
     return NextResponse.json({ holdings: formattedHoldings });

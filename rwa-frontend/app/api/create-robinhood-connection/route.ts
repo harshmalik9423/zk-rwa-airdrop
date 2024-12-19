@@ -10,7 +10,7 @@ export async function POST(request: Request) {
     // Check if an entry already exists
     const existingRegistry = await prisma.userRegistry.findFirst({
       where: {
-        userId: userId,
+        userid: userId,
         walletaddress: walletAddress,
       },
     });
@@ -22,8 +22,8 @@ export async function POST(request: Request) {
           id: existingRegistry.id,
         },
         data: {
-          isActive: true,
-          updatedAt: new Date(),
+          isactive: true,
+          updatedat: new Date(),
         },
       });
 
@@ -32,9 +32,9 @@ export async function POST(request: Request) {
       // Create new entry
       const newRegistry = await prisma.userRegistry.create({
         data: {
-          userId: userId,
+          userid: userId,
           walletaddress: walletAddress,
-          isActive: true,
+          isactive: true,
         },
       });
 

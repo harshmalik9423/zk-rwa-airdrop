@@ -18,20 +18,20 @@ model User {
 
 model UserHolding {
   id        String      @id @default(cuid())
-  userId  String
+  userid  String
   holding   String
-  noOfShares      Int
-  lastHoldingTime DateTime
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  noofshares      Int
+  lastholdingtime DateTime
+  createdat DateTime @default(now())
+  updatedat DateTime @updatedAt
 }
 
 
 model UserRegistry {
   id        String      @id @default(cuid())
-  userId  String
+  userid  String
   walletaddress     String
-  isActive Boolean @default(false)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  isactive Boolean @default(false)
+  createdat DateTime @default(now())
+  updatedat DateTime @updatedAt
 }
