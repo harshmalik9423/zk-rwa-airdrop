@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { PrismaClient } from '@prisma/client';
+import { randomUUID } from 'crypto';
 
 const prisma = new PrismaClient();
 
@@ -32,6 +33,7 @@ export async function POST(request: Request) {
       // Create new entry
       const newRegistry = await prisma.userRegistry.create({
         data: {
+          id: randomUUID().toString(),
           userid: userId,
           walletaddress: walletAddress,
           isactive: true,

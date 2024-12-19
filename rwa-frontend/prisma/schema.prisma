@@ -17,7 +17,7 @@ model User {
 }
 
 model UserHolding {
-  id        String      @id @default(cuid())
+  id        String      @id
   userid  String
   holding   String
   noofshares      Int
@@ -28,7 +28,7 @@ model UserHolding {
 
 
 model UserRegistry {
-  id        String      @id @default(cuid())
+  id        String      @id
   userid  String
   walletaddress     String
   isactive Boolean @default(false)
