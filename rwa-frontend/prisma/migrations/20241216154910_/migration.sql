@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS "User"
 
 -- create UserHolding
 CREATE TABLE IF NOT EXISTS "UserHolding" (
-  id INTEGER PRIMARY KEY,
+  id TEXT PRIMARY KEY,
   userId TEXT NOT NULL,
   holding TEXT NOT NULL,
   noOfShares INTEGER NOT NULL,
@@ -18,8 +18,8 @@ CREATE TABLE IF NOT EXISTS "UserHolding" (
 );
 
 -- create UserHolding
-CREATE TABLE "UserRegistry" (
-  id INTEGER PRIMARY KEY,
+CREATE TABLE IF NOT EXISTS "UserRegistry" (
+  id TEXT PRIMARY KEY,
   userId TEXT NOT NULL,
   walletaddress TEXT NOT NULL,
   isActive BOOL NOT NULL default false,
