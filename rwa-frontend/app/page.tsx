@@ -224,6 +224,7 @@ export default function Home() {
         'http://' + host + '/api/v1/generateZkProof',
         {
           method: 'POST',
+          mode: 'cors',
           headers: {
             'Content-Type': 'application/json',
           },
